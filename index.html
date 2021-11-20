@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Corona Virus Visualization on World Map</title>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="map">
+      <div class="indication" id="item-1">
+        =>Dark black means less number of cases
+        <button>X</button>
+      </div>
+      <div class="indication" id="item-2">
+        =>Dark red means more number of cases
+        <button>X</button>
+      </div>
+    </div>
+  </body>
+
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
+
+  <script>
+    mapboxgl.accessToken =
+      "pk.eyJ1Ijoia2F2YW4wMiIsImEiOiJja3NweDlpeGcwN2VsMm9vNnBiaDd6bzh0In0.ZrC1AqqoVWgoRvnz1C5dsQ";
+    var map = new mapboxgl.Map({
+      container: "map",
+      style: "mapbox://styles/mapbox/dark-v10",
+      zoom: 1,
+      center: [77.1025, 28.7041], //Center at delhi(longitude,latitide)
+    });
+  </script>
+
+  <script src="script.js"></script>
+</html>
